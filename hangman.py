@@ -1,5 +1,7 @@
 import nltk
 from nltk.corpus import brown
+import random
+import time
 
 nltk.download('brown')
 EnglishWordsList = brown.words()
@@ -31,3 +33,10 @@ elif diff == "4":
   # greater than or equal to 12
 
 filteredWordsList = [i.lower() for i in EnglishWordsList if len(i) >= wordLengthMin and len(i) <= wordLengthMax and i.isalpha()]
+random.seed(int(time.time()))
+
+SelectedWordIndex = random.randint(0,len(filteredWordsList)-1)
+HangmanWord = filteredWordsList[SelectedWordIndex]
+InputLetterList = ["_"] * len(HangmanWord)
+AvailableLetters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+incorrectCounter = 5
