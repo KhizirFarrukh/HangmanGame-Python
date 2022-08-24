@@ -30,3 +30,4 @@ elif diff == "4":
   wordLengthMax = 1000
   # greater than or equal to 12
 
+filteredWordsList = [i.lower() for i in EnglishWordsList if len(i) >= wordLengthMin and len(i) <= wordLengthMax and i.isalpha()]
