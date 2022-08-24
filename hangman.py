@@ -1,8 +1,11 @@
+print("Loading libraries")
+
 import nltk
 from nltk.corpus import brown
 import random
 import time
 
+print("Loading English Words Library")
 nltk.download('brown')
 EnglishWordsList = brown.words()
 
@@ -37,6 +40,7 @@ elif diff == "4":
   wordLengthMax = 1000
   # greater than or equal to 15
 
+print("Filtering words and selecting a word from library\n\n")
 filteredWordsList = [i.lower() for i in EnglishWordsList if len(i) >= wordLengthMin and len(i) <= wordLengthMax and i.isalpha()]
 random.seed(int(time.time()))
 
@@ -47,7 +51,6 @@ AvailableLetters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',
 incorrectTriesLimit = 5
 incorrectCounter = 0
 gameOver = False
-print(HangmanWord)
 
 while not gameOver:
   HangmanWordPrinter(InputLetterList)
@@ -64,11 +67,12 @@ while not gameOver:
         letterFound = True
     if "_" not in InputLetterList:
       gameOver = True
-      print("\n\n\t\tCongratulations!!! YOU WON!")
+      print("\n\n\t\tCongratulations!!! YOU WON!\n")
       HangmanWordPrinter(InputLetterList)
     if not letterFound:
       incorrectCounter += 1
       print("\n\n\t\tIncorrect Attempt!\n\n")
     if incorrectCounter == incorrectTriesLimit:
       print("\n\n\t\tYOU LOST!! GAME OVER!!!")
-      HangmanWordPrinter(InputLetterList)
+      print("\n\t\tHangman word : " + HangmanWord + "\n\n")
+      gameOver = True
