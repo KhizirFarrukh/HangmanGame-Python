@@ -16,5 +16,11 @@ a unique seed for random library
 
 ###### Release Notes ######
 
+Version 1.0:
+  -> Added print statements to make it loading easier to understand
+  -> Some touches added to print statements
+  -> Fixed a bug where game will not be over when all tries have been used
+  -> Fixed a bug that the game will print the Hangman input line instead of actual Hangman word
+
 Version 0:
   -> A functioning game 
