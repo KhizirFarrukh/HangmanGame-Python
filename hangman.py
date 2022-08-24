@@ -1,13 +1,14 @@
-print("Loading libraries")
-
-import nltk
-from nltk.corpus import brown
 import random
 import time
+from tqdm import tqdm
 
-print("Loading English Words Library")
-nltk.download('brown')
-EnglishWordsList = brown.words()
+print("Loading english words from file")
+wordsFile = open("wordsList.txt","r")
+words = wordsFile.readlines()
+EnglishWordsList = []
+for i in tqdm(range(len(words))):
+  EnglishWordsList.append(words[i][:-1])
+print("\n\n")
 
 def HangmanWordPrinter(InputLetterList):
   print("\t\t", end="")
