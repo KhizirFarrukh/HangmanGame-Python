@@ -16,6 +16,10 @@ a unique seed for random library
 
 # Release Notes
 
+#### Version 1.1:
+*  Removed nltk library and corpus, English Words are now loaded from a txt file
+*  Added progress bar on loading of english words
+
 ### Version 1.0:
 *  Added print statements to make it loading easier to understand
 *  Some touches added to print statements
