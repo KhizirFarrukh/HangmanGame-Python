@@ -16,6 +16,10 @@ a unique seed for random library
 
 # Release Notes
 
+#### Version 1.2:
+*  Removed loading print statements and progress bar since game loads instantly
+*  Added loop to game, new game starts after previous one is over
+
 #### Version 1.1:
 *  Removed nltk library and corpus, English Words are now loaded from a txt file
 *  Added progress bar on loading of english words
