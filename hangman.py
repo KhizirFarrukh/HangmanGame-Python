@@ -5,7 +5,7 @@ from tqdm import tqdm
 wordsFile = open("wordsList.txt","r")
 words = wordsFile.readlines()
 EnglishWordsList = []
-for i in tqdm(range(len(words))):
+for i in range(len(words)):
   EnglishWordsList.append(words[i][:-1])
 print("\n\n")
 
